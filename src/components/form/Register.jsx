@@ -23,8 +23,7 @@ const Register = () => {
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify(registerData),
-                mode: 'no-cors',
+                body: JSON.stringify(registerData)
             });
     
             if (response.ok) {
@@ -34,8 +33,9 @@ const Register = () => {
                 console.error('Erro no registro.');
             }
         } catch (error) {
-            console.error('Erro ao realizar a solicitação de registro.', error);
+            console.error('Erro ao realizar a solicitação de registro.', error.message);
         }
+        
     };
     
 
