@@ -13,22 +13,21 @@ const Register = () => {
         confirmpassword: '',
     });    
     const navigate = useNavigate();
-
     const handleRegisterSubmit = async (e) => {
         e.preventDefault();
-
+    
         try {
-            const response = await fetch('http://localhost:3000/auth/register', {
+            const response = await fetch('https://incredible-boba-9e191a.netlify.app/auth/register', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify(registerData),
             });
-
+    
             if (response.ok) {
                 console.log('Registro bem-sucedido!');
-                navigate('/login')
+                navigate('/login');
             } else {
                 console.error('Erro no registro.');
             }
@@ -36,6 +35,7 @@ const Register = () => {
             console.error('Erro ao realizar a solicitação de registro.', error);
         }
     };
+    
 
     const handleInputChange = (e) => {
         const { name, value } = e.target;
@@ -51,14 +51,14 @@ const Register = () => {
     }
 
     return (
-        <div className='w-full h-screen flex flex-col bg-[#fff] justify-center items-center'>
-            <h2 className="text-gray-600 font-semibold text-md mb-4">Register</h2>
+        <div className='w-full h-screen flex flex-col bg-[#111] justify-center items-center'>
+            <h2 className="text-[#fff] font-semibold text-md mb-4">Register</h2>
             <form 
             onSubmit={(e) => handleRegisterSubmit(e)} 
             className="w-10/12"
             >
                 <div className="my-5 relative">
-                    <label htmlFor="name" className="text-gray-600 text-left block text-xs absolute bg-[#fff] px-[4px] top-[-8px] left-[16px]">
+                    <label htmlFor="name" className="text-[#FF9400] text-left block text-xs absolute bg-[#111] px-[4px] top-[-8px] left-[16px]">
                         Name:
                     </label>
                     <input
@@ -68,11 +68,11 @@ const Register = () => {
                         required
                         onChange={handleInputChange}
                         className="w-full p-2  outline-none text-gray-600 text-xs
-                        bg-transparent border border-gray-600 rounded-3xl"
+                        bg-transparent border border-[#FF9400] rounded-3xl"
                     />
                 </div>
                 <div className="my-5 relative">
-                    <label htmlFor="email" className="text-gray-600 text-left block text-xs absolute bg-[#fff] px-[4px] top-[-8px] left-[16px]">
+                    <label htmlFor="email" className="text-[#FF9400] text-left block text-xs absolute bg-[#111] px-[4px] top-[-8px] left-[16px]">
                         Email:
                     </label>
                     <input
@@ -82,11 +82,11 @@ const Register = () => {
                         required
                         onChange={handleInputChange}
                         className="w-full p-2  outline-none text-gray-600 text-xs
-                        bg-transparent border border-gray-600 rounded-3xl"
+                        bg-transparent border border-[#FF9400] rounded-3xl"
                     />
                 </div>
                 <div className="my-5 relative">
-                    <label htmlFor="password" className="text-gray-600 text-left block text-xs absolute bg-[#fff] px-[4px] top-[-8px] left-[16px]">
+                    <label htmlFor="password" className="text-[#FF9400] text-left block text-xs absolute bg-[#111] px-[4px] top-[-8px] left-[16px]">
                         Password:
                     </label>
                     <input
@@ -96,7 +96,7 @@ const Register = () => {
                         required
                         onChange={handleInputChange}
                         className={`w-full p-2  outline-none text-gray-600 text-xs
-                        bg-transparent border ${borderVal} border-gray-600 rounded-3xl`}
+                        bg-transparent border ${borderVal} border-[#FF9400] rounded-3xl`}
                     />
                     {pass ? '' : (
                     <p className='text-red-600 text-left block text-xs pl-[16px]'>
@@ -110,7 +110,7 @@ const Register = () => {
 
                 </div>
                 <div className="my-5 relative">
-                    <label htmlFor="confirmpassword" className="text-gray-600 text-left block text-xs absolute bg-[#fff] px-[4px] top-[-8px] left-[16px]">
+                    <label htmlFor="confirmpassword" className="text-[#FF9400] text-left block text-xs absolute bg-[#111] px-[4px] top-[-8px] left-[16px]">
                         Confirm Password:
                     </label>
                     <input
@@ -120,7 +120,7 @@ const Register = () => {
                         required
                         onChange={handleInputChange}
                         className={`w-full p-2  outline-none text-gray-600 text-xs
-                        bg-transparent border ${borderVal} border-gray-600 rounded-3xl`}
+                        bg-transparent border ${borderVal} border-[#FF9400] rounded-3xl`}
                     />
                     {confirm ? '' : (
                     <p className='text-red-600 text-left block text-xs pl-[16px]'>

@@ -17,13 +17,13 @@ const Home = () => {
 
                 <div className="container mx-auto flex  justify-between items-center p-4 ">
                     <div className='mx-auto flex w-full justify-between items-center'>
-                        <img src={Logo} alt="logo barber" className='w-12 h-30 bg-slate-900 rounded-md' />
+                        <img src={Logo} alt="logo barber" className='w-12 h-30 rounded-md' />
                         <button type='button' className='flex flex-col bg-[#FF9400] p-2 rounded-md'
                         onClick={clickMenu}
                         >
-                            <span className='w-8 h-0.5 bg-[#0E1A34]'></span>
-                            <span className='w-8 h-0.5 bg-[#0E1A34] my-2'></span>
-                            <span className='w-8 h-0.5 bg-[#0E1A34]'></span>
+                            <span className='w-8 h-0.5 bg-[#111]'></span>
+                            <span className='w-8 h-0.5 bg-[#111] my-2'></span>
+                            <span className='w-8 h-0.5 bg-[#111]'></span>
                         </button>
                     </div>
                 </div>
@@ -46,7 +46,7 @@ const Home = () => {
             <CgChevronDoubleDownO className='icon '/>
         </div>
 
-        <section className='bg-[#0E1A34] flex flex-col mt-10 items-center'>
+        <section className='bg-[#111] flex flex-col mt-10 items-center'>
 
             <h2 className="text-left w-10/12 text-white font-bold mb-4">Meus <span className='text-[#FF9400]'>serviços</span> </h2>
             <article className='w-10/12 h-60 bg-[#dce5fa] flex justify-center items-end mb-10 rounded-xl' id='corte-1'>
@@ -67,7 +67,7 @@ const Home = () => {
 
         </section>
 
-        <main className='bg-[#0E1A34] flex flex-col items-center'>
+        <main className='bg-[#111] flex flex-col items-center'>
 
             <div className='w-10/12'>
                 <h1 className="text-left w-10/12 text-white font-bold mb-4">Agende seu <span className='text-[#FF9400]'>corte</span> </h1>
@@ -84,7 +84,7 @@ const Home = () => {
 
         </main>
 
-        <div className='bg-[#0E1A34] flex flex-col items-center'>
+        <div className='bg-[#111] flex flex-col items-center'>
             <h2 className="text-center w-10/12 text-white font-bold mb-4">Veja a localização da barbearia Your Name!</h2>
             <div className='w-full'>
                 <img src={Map} className='w-full h-full' alt="map" />

@@ -5,7 +5,7 @@ import Logo from '../../../assets/initial-image/logo.png';
 const Barber = () => {
     return(
         <>
-            <div className="anime shadow-xl shadow-[#ccc] mt-10 flex flex-col items-center p-3 w-full h-80 bg-white rounded-md ">
+            <div className="anime shadow-sm shadow-[#FF9400] mt-10 flex flex-col items-center p-3 w-full h-80 bg-[#111] rounded-md ">
 
                 <section className="flex justify-center items-center"> 
                     <div className="flex justify-center items-center w-14 h-14 rounded-full ">
@@ -35,7 +35,6 @@ const Barber = () => {
                         </div>
                     </div>
                 </section>
-
                 <section className="block m-3 flex flex-col justify-around h-full">
                     <div>
                         <p className="text-gray-600 text-sm w-full">

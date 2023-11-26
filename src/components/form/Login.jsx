@@ -8,19 +8,18 @@ const Login = () => {
         email: '',
         password: '',
     });
-
     const handleLoginSubmit = async (e) => {
         e.preventDefault();
-
+    
         try {
-            const response = await fetch('http://localhost:3000/auth/login', {
+            const response = await fetch('https://incredible-boba-9e191a.netlify.app/auth/login', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify(loginData),
             });
-
+    
             if (response.ok) {
                 console.log('Login bem-sucedido!');
                 // Redirecionar para a página /home após o login
@@ -33,7 +32,7 @@ const Login = () => {
             console.error('Erro ao realizar a solicitação de login.', error);
         }
     };
-
+    
     const handleInputChange = (e) => {
         const { name, value } = e.target;
         setLoginData((prevData) => ({ ...prevData, [name]: value }));
@@ -41,10 +40,10 @@ const Login = () => {
 
     return (
         <div className=' 
-            h-screen w-full h-screen bg-[#fff]	
+            h-screen w-full h-screen bg-[#111]	
             flex flex-col justify-center items-center'>
 
-            <h2 className="text-gray-600 font-semibold text-md mb-4">Login</h2>
+            <h2 className="text-[#fff] font-semibold text-md mb-4">Login</h2>
 
             <div 
             class="
@@ -58,7 +57,7 @@ const Login = () => {
                 >
                 <div className='mb-4 relative'>
                     <label htmlFor="emailLogin" 
-                    className="text-gray-600 text-left block text-xs absolute bg-[#fff] px-[4px] top-[-4px] left-[16px] after:content-['*']">
+                    className="text-[#FF9400] text-left block text-xs absolute bg-[#111] px-[4px] top-[-4px] left-[16px] after:content-['*']">
                         E-mail 
                     </label>     
 
@@ -70,14 +69,14 @@ const Login = () => {
                     onChange={handleInputChange}
                     className={`
                     w-full p-2 mb-2 mt-1 outline-none text-gray-600 text-xs
-                    bg-transparent border border-gray-600 rounded-3xl ${borderVal}
+                    bg-transparent border border-[#FF9400] rounded-3xl ${borderVal}
                     `}
                     />
                 </div>                    
 
                 <div className='mb-4 relative'>
                     <label htmlFor="passwordLogin" 
-                    className="text-gray-600 text-left block text-xs absolute bg-[#fff] px-[4px] top-[-4px] left-[16px] after:content-['*']">
+                    className="text-[#FF9400] text-left block text-xs absolute bg-[#111] px-[4px] top-[-4px] left-[16px] after:content-['*']">
                         Password  
                     </label>
                     <input
@@ -88,7 +87,7 @@ const Login = () => {
                     onChange={handleInputChange}
                     className={`
                     w-full p-2 mb-2 mt-1 outline-none text-gray-600 text-xs
-                    bg-transparent border border-gray-600 rounded-3xl ${borderVal}
+                    bg-transparent border border-[#FF9400] rounded-3xl ${borderVal}
                     `}
                     />
                 </div>
