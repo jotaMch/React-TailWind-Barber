@@ -13,6 +13,7 @@ const Register = () => {
         confirmpassword: '',
     });    
     const navigate = useNavigate();
+
     const handleRegisterSubmit = async (e) => {
         e.preventDefault();
     
@@ -23,6 +24,7 @@ const Register = () => {
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify(registerData),
+                mode: 'no-cors',
             });
     
             if (response.ok) {
